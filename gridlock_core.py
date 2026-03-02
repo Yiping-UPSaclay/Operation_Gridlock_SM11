@@ -74,7 +74,7 @@ SINKS = {
     "D6": {"x": 9, "y": 5, "demand": 1, "label": "E-Mid"},
     "D7": {"x": 2, "y": 2, "demand": 1, "label": "S-West"},
     "D8": {"x": 5, "y": 1, "demand": 2, "label": "S-Mid"},
-    "D9": {"x": 8, "y": 2, "demand": 1, "label": "S-East"},
+    "D9": {"x": 7, "y": 3, "demand": 1, "label": "S-East"},
 }
 TOTAL_DEMAND = sum(v["demand"] for v in SINKS.values())   # = 14
 
@@ -90,22 +90,22 @@ RELAY_CANDIDATES = {
     "RC9":  {"x": 2, "y": 3},
     "RC10": {"x": 5, "y": 3},
     "RC11": {"x": 4, "y": 5},
-    "RC12": {"x": 7, "y": 3},
+    "RC12": {"x": 8, "y": 2},
 }
 
 # Position lookup (all node types)
-_POSITIONS = {}
-_POSITIONS.update({k: (v["x"], v["y"]) for k, v in SOURCES.items()})
-_POSITIONS.update({k: (v["x"], v["y"]) for k, v in SINKS.items()})
-_POSITIONS.update({k: (v["x"], v["y"]) for k, v in RELAY_CANDIDATES.items()})
+POSITIONS = {}
+POSITIONS.update({k: (v["x"], v["y"]) for k, v in SOURCES.items()})
+POSITIONS.update({k: (v["x"], v["y"]) for k, v in SINKS.items()})
+POSITIONS.update({k: (v["x"], v["y"]) for k, v in RELAY_CANDIDATES.items()})
 
 
 # =============================================================
 #  COST FUNCTIONS
 # =============================================================
 def _dist(n1, n2):
-    x1, y1 = _POSITIONS[n1]
-    x2, y2 = _POSITIONS[n2]
+    x1, y1 = POSITIONS[n1]
+    x2, y2 = POSITIONS[n2]
     return _math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
 
 

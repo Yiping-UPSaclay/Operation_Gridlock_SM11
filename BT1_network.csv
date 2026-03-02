@@ -1,0 +1,36 @@
+record,id,value,role,x,y,label,source,target,cap,armored
+META,team_id,BT1,,,,,,,,
+META,team_name,My Team,,,,,,,,
+META,strategy,redundancy,,,,,,,,
+META,rationale,"Explain your strategy here (min 60 chars, graded). Which paths did you armor vs. leave unprotected? How do you ensure D5 (demand=3) stays served? How does your design hold up across the attack budget range?",,,,,,,,
+NODE,RC1,,relay,3,8,RC1,,,,
+NODE,RC2,,relay,7,8,RC2,,,,
+NODE,RC3,,relay,2,6,RC3,,,,
+NODE,RC6,,relay,8,6,RC6,,,,
+NODE,RC9,,relay,2,3,RC9,,,,
+NODE,RC10,,relay,5,3,RC10,,,,
+NODE,RC11,,relay,4,5,RC11,,,,
+NODE,RC12,,relay,7,3,RC12,,,,
+EDGE,S1-RC1,,,,,,S1,RC1,3,True
+EDGE,S1-RC3,,,,,,S1,RC3,3,False
+EDGE,S2-RC2,,,,,,S2,RC2,3,True
+EDGE,S2-RC6,,,,,,S2,RC6,3,False
+EDGE,S3-RC9,,,,,,S3,RC9,3,True
+EDGE,S4-RC12,,,,,,S4,RC12,3,True
+EDGE,RC1-RC11,,,,,,RC1,RC11,2,False
+EDGE,RC2-RC11,,,,,,RC2,RC11,2,False
+EDGE,RC3-RC9,,,,,,RC3,RC9,2,False
+EDGE,RC6-RC11,,,,,,RC6,RC11,2,False
+EDGE,RC6-RC12,,,,,,RC6,RC12,2,False
+EDGE,RC9-RC10,,,,,,RC9,RC10,2,False
+EDGE,RC10-RC11,,,,,,RC10,RC11,2,False
+EDGE,RC11-RC12,,,,,,RC11,RC12,2,False
+EDGE,RC1-D1,,,,,,RC1,D1,2,False
+EDGE,RC1-D2,,,,,,RC1,D2,1,False
+EDGE,RC2-D3,,,,,,RC2,D3,2,False
+EDGE,RC3-D4,,,,,,RC3,D4,1,False
+EDGE,RC11-D5,,,,,,RC11,D5,3,False
+EDGE,RC6-D6,,,,,,RC6,D6,1,False
+EDGE,RC9-D7,,,,,,RC9,D7,1,False
+EDGE,RC10-D8,,,,,,RC10,D8,2,False
+EDGE,RC12-D9,,,,,,RC12,D9,1,False
