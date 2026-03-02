@@ -1,0 +1,7 @@
+record,id,step,target_type,target_id,action,rationale,value
+META,red_team_id,,,,,, RT1
+META,target_team_id,,,,,,BT1
+META,chosen_plan,,,,,,Plan A
+META,predicted_min,,,,,,0.5
+ATTACK,,1,edge,E1,sever,Cuts off D1 supply,
+ATTACK,,2,edge,E3,degrade,Weakens central link,
