@@ -17,8 +17,8 @@ LINK_BUILD_MIN  = {1: 3, 2: 6, 3: 10}  # minimum build cost
 ARMOR_MULT      = 2.5                   # armored-link cost multiplier
 
 # ---- Attack costs (flat, independent of link length) -----------
-ATK_SEVER   = {1:  6, 2: 12, 3: 20}
-ATK_DEGRADE = {1:  3, 2:  6, 3: 10}
+ATK_SEVER   = 10   # flat -- independent of link capacity
+ATK_DEGRADE = 5    # flat -- independent of link capacity
 
 # ---- Red-Team budget uncertainty shown to Blue Teams -----------
 RED_MIN = 55

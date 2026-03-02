@@ -37,10 +37,10 @@ Open any notebook in Jupyter after installing dependencies.
 - Link build cost scales with distance and capacity (×2.5 if armored)
 - Attack costs are **flat** (independent of link length)
 
-| Action  | Cap=1 | Cap=2 | Cap=3 |
-|---------|-------|-------|-------|
-| sever   | 6u    | 12u   | 20u   |
-| degrade | 3u    | 6u    | 10u   |
+| Action  | Cost (flat) |
+|---------|-------------|
+| sever   | 10u         |
+| degrade | 5u          |
 
 ## Scoring
 

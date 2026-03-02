@@ -39,8 +39,8 @@ ARMOR_MULT      = 2.5
 # =============================================================
 #  ATTACK COSTS (flat -- independent of link length)
 # =============================================================
-ATK_SEVER   = {1:  6, 2: 12, 3: 20}
-ATK_DEGRADE = {1:  3, 2:  6, 3: 10}
+ATK_SEVER   = 10   # flat -- independent of link capacity
+ATK_DEGRADE = 5    # flat -- independent of link capacity
 
 # =============================================================
 #  ATTACK BUDGET RANGE (revealed in class)
@@ -256,11 +256,11 @@ def draw_network(nodes_df, edges_df, ax=None, title="",
         _mlines.Line2D([], [], color=PAL["armored"],     lw=2.4, ls="-",
                        label="Armored link  (immune, ×2.5 cost)"),
         _mlines.Line2D([], [], color=PAL["unprotected"], lw=EDGE_W[1], ls="-",
-                       label="Cap=1  (sever 6u / degrade 3u)"),
+                       label="Cap=1  (sever 10u / degrade 5u)"),
         _mlines.Line2D([], [], color=PAL["unprotected"], lw=EDGE_W[2], ls="-",
-                       label="Cap=2  (sever 12u / degrade 6u)"),
+                       label="Cap=2  (sever 10u / degrade 5u)"),
         _mlines.Line2D([], [], color=PAL["unprotected"], lw=EDGE_W[3], ls="-",
-                       label="Cap=3  (sever 20u / degrade 10u)"),
+                       label="Cap=3  (sever 10u / degrade 5u)"),
     ]
     ax.legend(handles=items, loc="upper right",
               framealpha=0.95, facecolor="white",
@@ -427,7 +427,7 @@ def run_attacks(nodes_df, edges_df, atk_df):
 
         elif action == "sever":
             cap          = int(emap[tid].cap)
-            cost         = ATK_SEVER[cap]
+            cost         = ATK_SEVER
             was_degraded = tid in deg_e        # check BEFORE discard (bug fix)
             dead_e.add(tid)
             deg_e.discard(tid)
@@ -443,7 +443,7 @@ def run_attacks(nodes_df, edges_df, atk_df):
                                  + " already degraded. Use 'sever' to finish.")
             else:
                 cap  = int(emap[tid].cap)
-                cost = ATK_DEGRADE[cap]
+                cost = ATK_DEGRADE
                 deg_e.add(tid)
                 ev["cost"]    = cost
                 ev["summary"] = ("Degraded " + tid
