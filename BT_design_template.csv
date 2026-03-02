@@ -1,0 +1,9 @@
+record,id,role,x,y,label,source,target,cap,armored,value
+META,team_id,,,,,,,,,BT1
+META,team_name,,,,,,,,,My Team
+META,strategy,,,,,,,,,redundancy
+META,rationale,,,,,,,,,Explain your design strategy here
+NODE,RC1,relay,3,8,Relay 1,,,,,
+NODE,RC4,relay,4,7,Relay 4,,,,,
+EDGE,E1,,,,, S1,RC1,2,False,
+EDGE,E2,,,,,RC1,D1,1,True,
