@@ -1,0 +1,11 @@
+record,step,id,value,target_type,target_id,action,rationale
+META,,red_team_id,RT1,,,,
+META,,target_team_id,BT2,,,,
+META,,chosen_plan,Evil Warlock Plus,,,,
+META,,recon_purchased,True,,,,
+META,,vuln_analysis,"Replace with your analysis (min 60 chars, graded). Which unprotected links have the highest drop per attack cost? What sequence causes the most damage within budget?",,,,
+ATTACK,1,,,edge,S1-RC3,sever,Example: cut a source spine
+ATTACK,2,,,edge,RC6-RC11,sever,Example: cut a relay backbone
+ATTACK,3,,,edge,S2-RC6,sever,Example: weaken a feed link
+ATTACK,4,,,edge,RC1-RC11,sever,Example: cut a critical link
+ATTACK,5,,,edge,RC11-D5,sever,Example: cut a critical link

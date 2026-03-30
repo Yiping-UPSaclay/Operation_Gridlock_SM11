@@ -1,10 +1,10 @@
 record,id,value,role,x,y,label,source,target,cap,armored
-META,team_id,BT1,,,,,,,,
-META,team_name,My Team 1,,,,,,,,
-META,strategy,redundancy,,,,,,,,
+META,team_id,BT2,,,,,,,,
+META,team_name,My Team 2,,,,,,,,
+META,strategy,mixed,,,,,,,,
 META,intel_purchased,False,,,,,,,,
 META,rationale,Explain your strategy here. Which paths did you armor vs. leave unprotected? How do you ensure D5 (demand=3) stays served? How does your design hold up across the attack budget range?,,,,,,,,
-META,armor_enc,Sl9I91F2pEg7Q2PJyfFt55MxIw20IgdK3EuD0Yj8djTrZUk3zdnogGjJdYMwsUzbpuqZPvF2g6eN0IoCuCBxGvHz6IToVxtPCRbSX8M2aIsCmOFuKtZl4CICN41t88lGbHW6fyrd0EvRrtAZjvtkiLVAxKkKjcUR0pI-0ilTmdUSrFbA7vXpiJJX3Lp38KjsrpEEmq9Musd22BBfwYk_2pN0qC3iaoHWRXMyzgVkz8_-1qxiVnGnI34fgEej685n5sHWVJqBJjjLEOS_aW3gFO4kmuqZkavK,,,,,,,,
+META,armor_enc,Sl9I91F2pEg7Q2PJyfFt55MxIw20IgdK3EuD0Yj8djTrZUk3zdnogGjJdYMwsUzbpuqZPvF2g6b9zPUTyiF6ZpuN-fb3KAo9CR2uNb0nGZV9iZNmKtZl4CIHN41t-8I6BgurCj6iwTnRpKxz8OoelNcup9oB-tMFvfFNzko9-qcZ2EDUgZablO1Q3LILmtb93I1t7KQw0LlnqQw2toFDsO1l2DKLGoiqLw0jvAdkz87-1qxiVna7SgwQ_C3d-rR8j7LaKPD_N0rCEOSwaW3gFO4kmOqZkKvKjdVFzzUgS9pyzw==,,,,,,,,
 NODE,RC1,,relay,3,8,RC1,,,,
 NODE,RC10,,relay,5,3,RC10,,,,
 NODE,RC11,,relay,4,5,RC11,,,,
@@ -19,6 +19,7 @@ EDGE,S2-RC2,,,,,,S2,RC2,3,hidden
 EDGE,S2-RC6,,,,,,S2,RC6,3,hidden
 EDGE,S3-RC9,,,,,,S3,RC9,3,hidden
 EDGE,S4-RC12,,,,,,S4,RC12,3,hidden
+EDGE,S3-RC10,,,,,,S3,RC10,2,hidden
 EDGE,RC1-RC11,,,,,,RC1,RC11,2,hidden
 EDGE,RC2-RC11,,,,,,RC2,RC11,2,hidden
 EDGE,RC3-RC9,,,,,,RC3,RC9,3,hidden

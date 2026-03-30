@@ -3,5 +3,7 @@ META,red_team_id,,,,,, RT1
 META,target_team_id,,,,,,BT1
 META,chosen_plan,,,,,,Plan A
 META,predicted_min,,,,,,0.5
+META,recon_purchased,,,,,,False
+META,vuln_analysis,,,,,,Explain your attack rationale here
 ATTACK,,1,edge,E1,sever,Cuts off D1 supply,
 ATTACK,,2,edge,E3,degrade,Weakens central link,
